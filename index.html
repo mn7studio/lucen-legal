@@ -1,42 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lucen Legal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
-    h1 { margin-bottom: 8px; }
-    ul { padding-left: 20px; }
-    a { color: #4a46ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .box {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
-      background: #fafafa;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucen — Yasal Belgeler</title>
+  <meta name="description" content="Lucen uygulamasına ait gizlilik politikası, kullanım koşulları ve destek sayfaları." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <h1>Lucen Legal</h1>
-  <p>Official legal and support pages for the Lucen mobile application.</p>
 
-  <div class="box">
-    <ul>
-      <li><a href="./privacy.html">Privacy Policy</a></li>
-      <li><a href="./terms.html">Terms of Use</a></li>
-      <li><a href="./support.html">Support</a></li>
-    </ul>
-  </div>
+  <header class="legal-header">
+    <a href="https://lucennapp.com" class="header-logo">L U C E N</a>
+    <a href="https://lucennapp.com" class="header-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      lucennapp.com
+    </a>
+  </header>
+
+  <main class="legal-content">
+    <h1 class="legal-title">Yasal Belgeler</h1>
+    <p class="legal-meta">Lucen mobil uygulamasına ait resmi gizlilik, koşullar ve destek sayfaları.</p>
+
+    <div class="hub-grid">
+      <a href="./privacy.html" class="hub-card">
+        <span class="hub-card-icon">◈</span>
+        <span class="hub-card-title">Gizlilik Politikası</span>
+        <p class="hub-card-desc">Hangi verileri topladığımız, nasıl kullandığımız ve haklarınız.</p>
+      </a>
+      <a href="./terms.html" class="hub-card">
+        <span class="hub-card-icon">✦</span>
+        <span class="hub-card-title">Kullanım Koşulları</span>
+        <p class="hub-card-desc">Uygulamayı kullanarak kabul ettiğiniz şartlar ve koşullar.</p>
+      </a>
+      <a href="./support.html" class="hub-card">
+        <span class="hub-card-icon">◯</span>
+        <span class="hub-card-title">Destek</span>
+        <p class="hub-card-desc">Sorunlarınız için yardım, iletişim bilgileri ve sık sorulan sorular.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <a href="https://lucennapp.com" class="legal-footer-logo">L U C E N</a>
+    <span class="legal-footer-copy">© 2026 Lucen. Tüm hakları saklıdır.</span>
+  </footer>
+
 </body>
 </html>

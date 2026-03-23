@@ -1,59 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lucen Support</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucen — Destek</title>
+  <meta name="description" content="Lucen destek sayfası — hesap, abonelik, satın alma iadesi ve teknik yardım için iletişim bilgileri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
-      background: #fff;
+    /* ── Support-page warm accent override ── */
+    .cta-wrap { margin-top: 40px; }
+    .response-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: rgba(26,26,46,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(142,142,147,0.80);
     }
-    h1, h2 { color: #111; }
-    a { color: #4a46ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .muted { color: #666; }
+    .response-note svg { flex-shrink: 0; margin-top: 2px; color: rgba(255,208,96,0.55); }
+    .platform-note {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(142,142,147,0.70);
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
   </style>
 </head>
 <body>
-  <h1>Support</h1>
-  <p class="muted">Last updated: March 2026</p>
 
-  <p>
-    If you need help with Lucen, subscriptions, restore purchases, account access,
-    or privacy-related questions, please contact us using the email below.
-  </p>
+  <header class="legal-header">
+    <a href="https://lucennapp.com" class="header-logo">L U C E N</a>
+    <a href="./index.html" class="header-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      Legal
+    </a>
+  </header>
 
-  <h2>Contact</h2>
-  <p>
-    <strong>mn7studio@outlook.com</strong>
-  </p>
+  <main class="legal-content">
+    <h1 class="legal-title">Destek</h1>
+    <p class="legal-meta">Son güncelleme: Mart 2026</p>
 
-  <h2>Support Topics</h2>
-  <ul>
-    <li>Account access issues</li>
-    <li>Premium subscription questions</li>
-    <li>Restore purchases</li>
-    <li>Privacy and data deletion requests</li>
-    <li>Bug reports and technical problems</li>
-  </ul>
+    <p>
+      Lucen ile ilgili her konuda yardımcı olmaktan memnuniyet duyarız.
+      Hesap erişiminden abonelik sorularına, teknik sorunlardan gizlilik taleplerine kadar
+      aşağıdaki konularda destek sağlıyoruz.
+    </p>
 
-  <h2>Response Time</h2>
-  <p>
-    We aim to respond within a reasonable time, depending on support volume.
-  </p>
+    <!-- Support topic cards -->
+    <div class="support-grid">
 
-  <h2>Subscriptions</h2>
-  <p>
-    Subscription management, cancellation, billing, and refund policies may depend on Apple App Store
-    or Google Play platform rules.
-  </p>
+      <div class="support-card">
+        <span class="support-card-icon">◈</span>
+        <h3>Hesap Erişimi</h3>
+        <p>Giriş yapamıyor musun? Hesabına erişimde sorun yaşıyorsan yardımcı olabiliriz.</p>
+      </div>
 
-  <p><a href="./index.html">← Back to legal home</a></p>
+      <div class="support-card">
+        <span class="support-card-icon">✦</span>
+        <h3>Premium Abonelik</h3>
+        <p>Premium özellikler, abonelik planları ve faturalandırma hakkındaki sorularını yanıtlarız.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-card-icon">◯</span>
+        <h3>Satın Alma İadesi</h3>
+        <p>Daha önce yaptığın satın almaları uygulamadan geri yükleyebilirsin. Sorun yaşarsan destek al.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-card-icon">✧</span>
+        <h3>Gizlilik & Veri</h3>
+        <p>Verilerinin silinmesini, dışa aktarılmasını veya gizlilikle ilgili sorularını ilet.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-card-icon">◐</span>
+        <h3>Teknik Sorunlar</h3>
+        <p>Uygulama hataları, içerik yüklenmiyor veya beklenmedik bir davranış mı var? Bildir.</p>
+      </div>
+
+      <div class="support-card">
+        <span class="support-card-icon">◉</span>
+        <h3>Hesap Silme</h3>
+        <p>Hesabını ve verilerini silmek için uygulamadaki hesap silme akışını kullanabilirsin.</p>
+      </div>
+
+    </div>
+
+    <h2>İletişim</h2>
+    <p>
+      Yukarıdaki konulardan herhangi biriyle ilgili yardıma ihtiyaç duyarsan
+      aşağıdaki e-posta adresinden bize ulaşabilirsin:
+    </p>
+
+    <div class="highlight">
+      <p>
+        <strong>
+          <a href="mailto:mn7studio@outlook.com">mn7studio@outlook.com</a>
+        </strong>
+      </p>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="mailto:mn7studio@outlook.com" class="cta-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        E-posta Gönder
+      </a>
+    </div>
+
+    <div class="response-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <span>
+        Destek taleplerine destek yoğunluğuna bağlı olarak makul bir süre içinde yanıt vermeye çalışıyoruz.
+        Mesajını göndermeden önce e-posta konusunu kısaca belirtirsen süreç daha hızlı ilerler.
+      </span>
+    </div>
+
+    <h2>Abonelik Yönetimi</h2>
+    <p>
+      Abonelik iptali, yenileme ve iade politikaları, satın alımın yapıldığı platforma göre
+      Apple App Store veya Google Play kurallarına tabidir.
+    </p>
+    <p class="platform-note">
+      Aboneliğini iptal etmek için ilgili platformun abonelik yönetim ekranını kullanabilirsin.
+      Uygun satın almaları uygulamanın ayarlar bölümünden geri yükleyebilirsin.
+    </p>
+
+    <a href="./index.html" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      Tüm Yasal Belgeler
+    </a>
+  </main>
+
+  <footer class="legal-footer">
+    <a href="https://lucennapp.com" class="legal-footer-logo">L U C E N</a>
+    <span class="legal-footer-copy">© 2026 Lucen. Tüm hakları saklıdır.</span>
+  </footer>
+
 </body>
 </html>

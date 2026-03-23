@@ -1,0 +1,311 @@
+/* ─────────────────────────────────────────────────────────────────
+   Lucen Legal — Shared Styles
+   Applies to: index.html, privacy.html, terms.html, support.html
+   ──────────────────────────────────────────────────────────────── */
+
+/* ─── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── Base ───────────────────────────────────────────────────── */
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #0D0D1A;
+  color: #8E8E93;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle ambient blob — top-left only, very restrained */
+body::before {
+  content: '';
+  position: fixed;
+  top: -120px; left: -180px;
+  width: 560px; height: 560px;
+  background: radial-gradient(circle,
+    rgba(58,21,128,0.18) 0%,
+    transparent 62%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Header ─────────────────────────────────────────────────── */
+.legal-header {
+  position: sticky;
+  top: 0; z-index: 50;
+  background: rgba(13,13,26,0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.65em;
+  padding-right: 0.65em;
+  color: #FFD060;
+  text-decoration: none;
+}
+.header-back {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8E8E93;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+.header-back:hover { color: #F2F2F7; }
+.header-back svg { flex-shrink: 0; }
+
+/* ─── Content wrapper ────────────────────────────────────────── */
+.legal-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 32px 96px;
+}
+
+/* ─── Page title area ────────────────────────────────────────── */
+.legal-title {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.12;
+  color: #F2F2F7;
+  margin-bottom: 10px;
+}
+.legal-meta {
+  font-size: 13px;
+  color: rgba(142,142,147,0.55);
+  margin-bottom: 44px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ─── Typography ─────────────────────────────────────────────── */
+p {
+  font-size: 15px;
+  line-height: 1.80;
+  color: #8E8E93;
+  margin-bottom: 18px;
+}
+
+ul, ol {
+  padding-left: 22px;
+  margin-bottom: 20px;
+}
+li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #8E8E93;
+  margin-bottom: 8px;
+}
+
+/* ─── Section headings ───────────────────────────────────────── */
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #F2F2F7;
+  letter-spacing: -0.1px;
+  margin-top: 44px;
+  margin-bottom: 14px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(255,208,96,0.55);
+}
+
+/* ─── Highlight / contact box ────────────────────────────────── */
+.highlight {
+  background: rgba(26,26,46,0.60);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 22px 26px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 28px 0;
+}
+.highlight p { margin-bottom: 0; }
+.highlight strong {
+  color: #F2F2F7;
+  font-weight: 600;
+}
+.highlight a {
+  color: #FFD060;
+  text-decoration: none;
+}
+.highlight a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ─── Inline links ───────────────────────────────────────────── */
+a {
+  color: rgba(255,208,96,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: #FFD060; }
+
+/* ─── Back / nav link ────────────────────────────────────────── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8E8E93;
+  text-decoration: none;
+  margin-top: 52px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.back-link:hover {
+  color: #F2F2F7;
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ─── Support-specific: topic cards ─────────────────────────── */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 28px 0 44px;
+}
+.support-card {
+  background: rgba(26,26,46,0.55);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 18px;
+  padding: 24px 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.25s;
+}
+.support-card:hover {
+  border-color: rgba(255,208,96,0.18);
+}
+.support-card-icon {
+  font-size: 18px;
+  color: #FFD060;
+  margin-bottom: 14px;
+  display: block;
+}
+.support-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F2F2F7;
+  margin-bottom: 8px;
+  letter-spacing: -0.1px;
+}
+.support-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(142,142,147,0.85);
+  margin-bottom: 0;
+}
+
+/* ─── CTA button (support page) ─────────────────────────────── */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #1A1200;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #FFBB4D 0%, #F5A020 100%);
+  box-shadow: 0 8px 24px rgba(245,166,35,0.38);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.cta-btn:hover { opacity: 0.90; transform: translateY(-1px); color: #1A1200; }
+
+/* ─── Legal index hub cards ──────────────────────────────────── */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 40px;
+}
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(26,26,46,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px 22px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.hub-card:hover {
+  border-color: rgba(255,208,96,0.22);
+  transform: translateY(-3px);
+  color: inherit;
+}
+.hub-card-icon {
+  font-size: 18px;
+  color: #FFD060;
+  margin-bottom: 6px;
+}
+.hub-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F2F2F7;
+  letter-spacing: -0.1px;
+}
+.hub-card-desc {
+  font-size: 13px;
+  color: rgba(142,142,147,0.80);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ─── Footer (legal pages) ───────────────────────────────────── */
+.legal-footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: rgba(6,6,16,0.40);
+}
+.legal-footer-logo {
+  font-size: 11px;
+  font-weight: 200;
+  letter-spacing: 0.6em;
+  padding-right: 0.6em;
+  color: rgba(255,208,96,0.65);
+  text-decoration: none;
+}
+.legal-footer-copy {
+  font-size: 11px;
+  color: rgba(142,142,147,0.38);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .legal-header { padding: 0 20px; }
+  .legal-content { padding: 40px 20px 72px; }
+  .legal-footer { padding: 20px; }
+  h2 { margin-top: 36px; }
+}
