@@ -4,36 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lucen — Destek</title>
-  <meta name="description" content="Lucen destek sayfası — hesap, abonelik, satın alma iadesi ve teknik yardım için iletişim bilgileri." />
+  <meta name="description" content="Lucen destek sayfası — hesap, abonelik, gizlilik ve teknik yardım için iletişim." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
   <style>
-    /* ── Support-page warm accent override ── */
-    .cta-wrap { margin-top: 40px; }
-    .response-note {
+    .info-row {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      margin-top: 28px;
-      padding: 18px 22px;
-      background: rgba(26,26,46,0.45);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px;
       font-size: 13px;
       line-height: 1.65;
       color: rgba(142,142,147,0.80);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-    .response-note svg { flex-shrink: 0; margin-top: 2px; color: rgba(255,208,96,0.55); }
-    .platform-note {
-      font-size: 13px;
-      line-height: 1.7;
-      color: rgba(142,142,147,0.70);
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+    .info-row:last-child { border-bottom: none; }
+    .info-row svg { flex-shrink: 0; margin-top: 2px; color: rgba(255,208,96,0.50); }
+    .info-row strong { color: #F2F2F7; font-weight: 600; }
+
+    .email-block {
+      margin-top: 32px;
     }
+    .cta-btn-wrap {
+      margin-top: 20px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #1A1200;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #FFBB4D 0%, #F5A020 100%);
+      box-shadow: 0 8px 24px rgba(245,166,35,0.35);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover {
+      opacity: 0.90;
+      transform: translateY(-1px);
+      color: #1A1200;
+    }
+
+    .info-box {
+      background: rgba(26,26,46,0.45);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-top: 20px;
+    }
+    .info-box p { margin-bottom: 0; font-size: 13px; line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -44,7 +70,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <polyline points="15 18 9 12 15 6"></polyline>
       </svg>
-      Legal
+      Yasal
     </a>
   </header>
 
@@ -53,9 +79,9 @@
     <p class="legal-meta">Son güncelleme: Mart 2026</p>
 
     <p>
-      Lucen ile ilgili her konuda yardımcı olmaktan memnuniyet duyarız.
-      Hesap erişiminden abonelik sorularına, teknik sorunlardan gizlilik taleplerine kadar
-      aşağıdaki konularda destek sağlıyoruz.
+      Lucen kullanımıyla ilgili yaşadığınız her konuda yardımcı olmaktan memnuniyet duyarız.
+      Aşağıdaki destek konularına göz attıktan sonra, sorunuz karşılanmıyorsa e-posta
+      yoluyla iletişime geçebilirsiniz.
     </p>
 
     <!-- Support topic cards -->
@@ -64,57 +90,79 @@
       <div class="support-card">
         <span class="support-card-icon">◈</span>
         <h3>Hesap Erişimi</h3>
-        <p>Giriş yapamıyor musun? Hesabına erişimde sorun yaşıyorsan yardımcı olabiliriz.</p>
+        <p>
+          Giriş yapamıyor musun veya hesabına erişimde sorun mu yaşıyorsun?
+          Google ya da Apple oturumunun güncel ve çalışır durumda olduğundan emin ol.
+          Sorun devam ederse bizimle iletişime geç.
+        </p>
       </div>
 
       <div class="support-card">
         <span class="support-card-icon">✦</span>
-        <h3>Premium Abonelik</h3>
-        <p>Premium özellikler, abonelik planları ve faturalandırma hakkındaki sorularını yanıtlarız.</p>
+        <h3>Premium ve Faturalandırma</h3>
+        <p>
+          Premium özelliklere erişimde sorun yaşıyor musun? Aboneliğinin aktif olup olmadığını
+          uygulamanın profil bölümünden kontrol edebilirsin. Faturalandırma sorularında
+          App Store veya Google Play desteğiyle de iletişime geçebilirsin.
+        </p>
       </div>
 
       <div class="support-card">
         <span class="support-card-icon">◯</span>
-        <h3>Satın Alma İadesi</h3>
-        <p>Daha önce yaptığın satın almaları uygulamadan geri yükleyebilirsin. Sorun yaşarsan destek al.</p>
+        <h3>Satın Almaları Geri Yükle</h3>
+        <p>
+          Daha önce yaptığın satın almaları geri yüklemek için uygulamanın profil bölümündeki
+          "Satın Almaları Geri Yükle" seçeneğini kullan. Sorun yaşarsan bize yaz.
+        </p>
       </div>
 
       <div class="support-card">
         <span class="support-card-icon">✧</span>
-        <h3>Gizlilik & Veri</h3>
-        <p>Verilerinin silinmesini, dışa aktarılmasını veya gizlilikle ilgili sorularını ilet.</p>
+        <h3>Gizlilik ve Veri Silme</h3>
+        <p>
+          Hesabını ve tüm verilerini kalıcı olarak silmek için uygulamadaki hesap silme
+          akışını kullanabilirsin. Bu işlem geri alınamaz. Yardım gerekirse bizimle iletişime geç.
+        </p>
       </div>
 
       <div class="support-card">
         <span class="support-card-icon">◐</span>
         <h3>Teknik Sorunlar</h3>
-        <p>Uygulama hataları, içerik yüklenmiyor veya beklenmedik bir davranış mı var? Bildir.</p>
+        <p>
+          Uygulama donuyor, içerik yüklenmiyor veya beklenmedik bir hata mı alıyorsun?
+          Uygulamayı kapatıp yeniden açmayı dene. Sorun devam ederse aşağıdaki bilgilerle
+          bize yazabilirsin.
+        </p>
       </div>
 
       <div class="support-card">
         <span class="support-card-icon">◉</span>
-        <h3>Hesap Silme</h3>
-        <p>Hesabını ve verilerini silmek için uygulamadaki hesap silme akışını kullanabilirsin.</p>
+        <h3>İçerik Kalitesi</h3>
+        <p>
+          Astroloji yorumu, rüya analizi veya yapay zeka sohbetinde sorunlu ya da
+          yetersiz bir içerikle karşılaştıysan uygulama içinden bildirebilirsin.
+          Genel geri bildirim için de bizimle iletişime geçebilirsin.
+        </p>
       </div>
 
     </div>
 
     <h2>İletişim</h2>
     <p>
-      Yukarıdaki konulardan herhangi biriyle ilgili yardıma ihtiyaç duyarsan
-      aşağıdaki e-posta adresinden bize ulaşabilirsin:
+      Aşağıdaki destek e-posta adresine yazabilirsin. Mesajını göndermeden önce
+      ilgili bilgileri dahil edersen süreç daha hızlı ilerler.
     </p>
 
-    <div class="highlight">
+    <div class="highlight email-block">
       <p>
         <strong>
-          <a href="mailto:mn7studio@outlook.com">mn7studio@outlook.com</a>
+          <a href="mailto:lucenn.app@gmail.com">lucenn.app@gmail.com</a>
         </strong>
       </p>
     </div>
 
-    <div class="cta-wrap">
-      <a href="mailto:mn7studio@outlook.com" class="cta-btn">
+    <div class="cta-btn-wrap">
+      <a href="mailto:lucenn.app@gmail.com" class="cta-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
           <polyline points="22,6 12,13 2,6"></polyline>
@@ -123,26 +171,87 @@
       </a>
     </div>
 
-    <div class="response-note">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="12" y1="8" x2="12" y2="12"></line>
-        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-      </svg>
-      <span>
-        Destek taleplerine destek yoğunluğuna bağlı olarak makul bir süre içinde yanıt vermeye çalışıyoruz.
-        Mesajını göndermeden önce e-posta konusunu kısaca belirtirsen süreç daha hızlı ilerler.
-      </span>
+    <h2>E-postana Dahil Etmeni Önerdiklerimiz</h2>
+    <p>
+      Sorununuzu daha hızlı çözebilmemiz için e-postana aşağıdaki bilgileri eklememeni öneririz:
+    </p>
+
+    <div class="info-box">
+      <div class="info-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+        <span><strong>Cihaz:</strong> iPhone / Android (marka ve model)</span>
+      </div>
+      <div class="info-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span><strong>Platform:</strong> App Store (iOS) veya Google Play (Android)</span>
+      </div>
+      <div class="info-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="4 17 10 11 4 5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        <span><strong>Uygulama versiyonu:</strong> Profil bölümünde görüntülenebilir</span>
+      </div>
+      <div class="info-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        <span><strong>Sorunun kısa açıklaması:</strong> Ne yapmaya çalışıyordun, ne oldu?</span>
+      </div>
+      <div class="info-row">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span><strong>Hesap tipi:</strong> Google ile mi yoksa Apple ile mi giriş yapıyorsun?</span>
+      </div>
     </div>
+
+    <h2>Yanıt Süresi</h2>
+    <p>
+      Destek taleplerine, yoğunluğa göre değişmekle birlikte makul bir süre içinde yanıt vermeye
+      çalışıyoruz. Yanıtımız bazen spam veya promosyon klasörüne düşebilir; lütfen kontrol etmeyi
+      unutma.
+    </p>
 
     <h2>Abonelik Yönetimi</h2>
     <p>
-      Abonelik iptali, yenileme ve iade politikaları, satın alımın yapıldığı platforma göre
-      Apple App Store veya Google Play kurallarına tabidir.
+      Abonelik iptali ve yönetimi aşağıdaki platform ekranları üzerinden yapılır:
     </p>
-    <p class="platform-note">
-      Aboneliğini iptal etmek için ilgili platformun abonelik yönetim ekranını kullanabilirsin.
-      Uygun satın almaları uygulamanın ayarlar bölümünden geri yükleyebilirsin.
+    <ul>
+      <li>
+        <strong style="color:#F2F2F7;">iOS (App Store):</strong> Ayarlar &rarr; [Adın] &rarr;
+        Abonelikler &rarr; Lucen
+      </li>
+      <li>
+        <strong style="color:#F2F2F7;">Android (Google Play):</strong> Google Play Mağazası &rarr;
+        Profil &rarr; Ödemeler ve abonelikler &rarr; Abonelikler &rarr; Lucen
+      </li>
+    </ul>
+    <p>
+      İade talepleri, satın almanın yapıldığı platformun politikasına tabidir.
+      Lucen bu konuda ek iade garantisi vermemektedir.
+    </p>
+
+    <h2>Hesap Silme</h2>
+    <p>
+      Hesabını ve tüm verilerini kalıcı olarak silmek için uygulama içindeki hesap silme
+      akışını kullanabilirsin: <strong style="color:#F2F2F7;">Profil &rarr; Ayarlar &rarr; Hesabı Sil.</strong>
+    </p>
+    <p>
+      Bu işlem geri alınamaz ve tüm profil verilerin, geçmişin ve kayıtlı içeriklerinin
+      kalıcı olarak silinmesiyle sonuçlanır. İşlem sırasında sorun yaşarsan bizimle
+      iletişime geçebilirsin.
     </p>
 
     <a href="./index.html" class="back-link">
